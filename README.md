@@ -37,18 +37,19 @@ A pet foster app where users can find and post listings for pets in need of a fo
 **Required Must-have Stories**
 
 * User can Login
-* User can SignUp
-* User can post photos and information
+* User can Sign Up
+* User can post a listing for a pet, with a photo and other info
 * User can select cell for more information
 * User can adopt pet from detailed view
-* ...
+* User can search for keywords (species, breed, age)
+* User can post comments on a listing
 
 **Optional Nice-to-have Stories AKA Stretch goals**
 
-* Infinate Scroll
-* Refresh Circle
-* User can search 
-* Message owner of listing
+* Infinite Scrolling
+* User can sort listings by location via dropdown selection 
+* Refresh Listings
+* Add location of listing via map 
 
 ### 2. Screen Archetypes
 
@@ -62,14 +63,15 @@ A pet foster app where users can find and post listings for pets in need of a fo
     * Post listing
 * Detail
     * Viewed detailed information about a listing
+* Settings
+    * User can set filters for the listing view 
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* Stream
-* Profile
-* Create
+* Stream (View Pet Listings)
+* Create (Post New Pet Listing)
 
 **Flow Navigation** (Screen to Screen)
 
@@ -78,13 +80,12 @@ A pet foster app where users can find and post listings for pets in need of a fo
 * Register
     * Stream
 * Stream
-   * Profile
+   * Settings
    * Create
    * Detail
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+![](https://i.imgur.com/qfnFtCw.jpg)
 
 ### [BONUS] Digital Wireframes & Mockups
 ![](https://i.imgur.com/TusPJBP.png)
