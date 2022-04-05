@@ -94,14 +94,118 @@ A pet foster app where users can find and post listings for pets in need of a fo
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
-// data base? 
-Username table: 
-id, username, password
+
+#### Listing
+| Property    | Type             | Description                                  |
+| ----------- | ---------------- | -------------------------------------------- |
+| age         | Int              | The pet's age (in years)                     |
+| description | String           | Description for misc info                    |
+| species     | String           | The pet's species                            |
+| name        | String           | Name of pet                                  |
+| owner       | Pointer to User  | Reference to the user who posted the listing |
+| comments    | List of Comments | Comments posted to the listing               |
+| claimedBy   | Pointer to User  | The user who adopted the pet                 |
+| datePosted            |    DateTime              |    The time of the post                                          |
+| image       | File             | Picture of pet supplied by user              |
+
+#### Comment
+
+| Property | Type               | Description                           |
+| -------- | ------------------ | ------------------------------------- |
+| listing  | Pointer to Listing | The listing the comment was posted to |
+| text     | String             | The contents of the comment           |
+| datePosted         |         DateTime           |      The time the comment was posted                                 |
+| author   | Pointer to User    | The author of the comment             |
+
+
 
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+#### List of network requests by screen
+- Listing Stream View
+    - (Read/GET) Query all pet listings
+    `let query = PFQuery(className:"Listing")
+query.order(byDescending: "datePosted")
+query.findObjectsInBackground { (listings: [PFObject]?, error: Error?) in
+   if let error = error { 
+      print(error.localizedDescription)
+   } else if let listings = listings {
+      print("Successfully retrieved \(listings.count) listings.")
+  // TODO: Do something with listings...
+   }
+}`
+- Listing Detail View
+    - (Create/POST) Add a comment to the listing
+ 
+```
+let comment = PFObject(className: "comments")
+        comment["text"] = text
+        comment["listing"] = selectedListing
+        comment["author"] = PFUser.current()
+```
+
+    selectedListing.add(comment, forKey: "comments")
+
+    selectedListing.saveInBackground{( success, error ) in
+        if success {
+            print("Comment saving Success!")
+        } else {
+            print("Error saving comment")
+        }
+    }
+
+- (Update/PUT) Adopt the pet
+```
+class Pet: SKScene {
+
+   var name: String?
+   var age : Int!
+   var species = String?
+   var claimedBy = String?
+
+   init(claimedBy: String) {
+    super.init()
+    self.claimedBy = claimedBy
+   }
+
+   required init(coder aDecoder: NSCoder) {
+     super.init()
+   }
+
+}
+
+func callFunctionOutsideClass(){
+}
+```
+
+
+- (Read/GET) Display the listing's comments
+
+
+
+```
+let query =PFQuery(className:"Comments")
+        query.order(byDescending: "datePosted")query.findObjectsInBackground { (comments: [PFObject]?, error: Error?) in
+       if let error = error { 
+          print(error.localizedDescription)
+       } else if let comments = comments {
+          print("Successfully retrieved \(comments.count) comments.")
+      // TODO: Do something with comments...
+       }
+    }
+```
+
+
+- Create Post Screen
+    - (Create/POST) Create a new listing
+    
+        ```let listing = PFObject(className: "listings")
+        
+        listing["owner"] = PFUser.current()!
+        post["description"] = descField.text!
+        // ... get other values
+        
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(data: imageData!)
+        
+        listing["image"] = file
