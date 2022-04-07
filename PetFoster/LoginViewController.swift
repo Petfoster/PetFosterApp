@@ -6,16 +6,34 @@
 //
 
 import UIKit
+// import Parse
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var loginUserField: UITextField!
+    @IBOutlet weak var loginPassField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onLoginButton(_ sender: Any) {
+        let username = loginUserField.text!
+        let password = loginPassField.text!
+        
+        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+        
+//        PFUser.logInWithUsername(inBackground: username, password: password)
+//        { (user, error) in
+//            if user != nil {
+//                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+//            } else {
+//                print("Error: \(String(describing: error?.localizedDescription))")
+//            }
+//        }
+    }
+    
     /*
     // MARK: - Navigation
 
