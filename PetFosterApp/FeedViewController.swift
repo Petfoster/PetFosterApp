@@ -17,6 +17,10 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         let listing = PFObject(className: "Listing")
         listing["author"] = "Nick"
+        listing["name"] = "Buddy"
+        listing["age"] = 1
+        listing["species"] = "Dog"
+        listing["claimedBy"] = "Jose"
         listing.saveInBackground { success, error in
             if success{
                 print("saved!")

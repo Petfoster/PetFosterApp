@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC864E6280798D000C2FA0C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC864E5280798D000C2FA0C /* FeedViewController.swift */; };
+		0AC864E828079B2A00C2FA0C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC864E728079B2A00C2FA0C /* LoginViewController.swift */; };
 		328CD0913303B9E4974A6296 /* Pods_PetFosterAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA61F1CCFAC88EFA94DF60E9 /* Pods_PetFosterAppTests.framework */; };
 		8BDD63BB52E3E96432D5007F /* Pods_PetFosterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ECC6F07492855185779A35A /* Pods_PetFosterApp.framework */; };
 		992136B3DACA603D0A30D60F /* Pods_PetFosterApp_PetFosterAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E182523FF90F6F9D7911A /* Pods_PetFosterApp_PetFosterAppUITests.framework */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AC864E5280798D000C2FA0C /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		0AC864E728079B2A00C2FA0C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2ECC6F07492855185779A35A /* Pods_PetFosterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFosterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A7E62D49A9DB91E2BB97F4 /* Pods-PetFosterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFosterApp.debug.xcconfig"; path = "Target Support Files/Pods-PetFosterApp/Pods-PetFosterApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3A3FAFE1C6FA0DC4F7079F92 /* Pods-PetFosterApp-PetFosterAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFosterApp-PetFosterAppUITests.release.xcconfig"; path = "Target Support Files/Pods-PetFosterApp-PetFosterAppUITests/Pods-PetFosterApp-PetFosterAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +115,6 @@
 				D07EBB395D396620E362A3DE /* Pods-PetFosterAppTests.debug.xcconfig */,
 				6FB576988670855C750E6F22 /* Pods-PetFosterAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +143,8 @@
 		D3A441FC27FE8C60002A708B /* PetFosterApp */ = {
 			isa = PBXGroup;
 			children = (
+				0AC864E728079B2A00C2FA0C /* LoginViewController.swift */,
+				0AC864E5280798D000C2FA0C /* FeedViewController.swift */,
 				D3A441FD27FE8C60002A708B /* AppDelegate.swift */,
 				D3A441FF27FE8C60002A708B /* SceneDelegate.swift */,
 				D3A4420127FE8C60002A708B /* ViewController.swift */,
@@ -409,6 +414,8 @@
 			files = (
 				D3A4420227FE8C60002A708B /* ViewController.swift in Sources */,
 				D3A441FE27FE8C60002A708B /* AppDelegate.swift in Sources */,
+				0AC864E6280798D000C2FA0C /* FeedViewController.swift in Sources */,
+				0AC864E828079B2A00C2FA0C /* LoginViewController.swift in Sources */,
 				D3A4420027FE8C60002A708B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

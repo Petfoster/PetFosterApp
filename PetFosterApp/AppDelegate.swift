@@ -1,11 +1,12 @@
 //
 //  AppDelegate.swift
-//  PetFosterApp
+//  PetFoster
 //
-//  Created by Alexis Sanchez on 4/6/22.
+//  Created by Niko Holbrook on 4/6/22.
 //
 
 import UIKit
+import Parse
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
-    }
+        
+        let parseConfig = ParseClientConfiguration {
+                        $0.applicationId = "E9LmmkmwKJoIgatJZ9fazMfruT2D7HFKzZSDdw0N" // <- UPDATE
+                        $0.clientKey = "1lPtyLdNHqWctHgW22uOHJJByLRjSr9fJbEbqc4g" // <- UPDATE
+                        $0.server = "https://parseapi.back4app.com"
+                }
+                Parse.initialize(with: parseConfig)
+                
+                // --- end copy
+
+                return true
+            }
+    
+    
 
     // MARK: UISceneSession Lifecycle
 
