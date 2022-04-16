@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		0AC864E6280798D000C2FA0C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC864E5280798D000C2FA0C /* FeedViewController.swift */; };
 		0AC864E828079B2A00C2FA0C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC864E728079B2A00C2FA0C /* LoginViewController.swift */; };
-		328CD0913303B9E4974A6296 /* Pods_PetFosterAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA61F1CCFAC88EFA94DF60E9 /* Pods_PetFosterAppTests.framework */; };
 		8BDD63BB52E3E96432D5007F /* Pods_PetFosterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ECC6F07492855185779A35A /* Pods_PetFosterApp.framework */; };
-		992136B3DACA603D0A30D60F /* Pods_PetFosterApp_PetFosterAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E182523FF90F6F9D7911A /* Pods_PetFosterApp_PetFosterAppUITests.framework */; };
 		D3A441FE27FE8C60002A708B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A441FD27FE8C60002A708B /* AppDelegate.swift */; };
 		D3A4420027FE8C60002A708B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A441FF27FE8C60002A708B /* SceneDelegate.swift */; };
 		D3A4420227FE8C60002A708B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4420127FE8C60002A708B /* ViewController.swift */; };
@@ -48,13 +46,7 @@
 		0AC864E728079B2A00C2FA0C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2ECC6F07492855185779A35A /* Pods_PetFosterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFosterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A7E62D49A9DB91E2BB97F4 /* Pods-PetFosterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFosterApp.debug.xcconfig"; path = "Target Support Files/Pods-PetFosterApp/Pods-PetFosterApp.debug.xcconfig"; sourceTree = "<group>"; };
-		3A3FAFE1C6FA0DC4F7079F92 /* Pods-PetFosterApp-PetFosterAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFosterApp-PetFosterAppUITests.release.xcconfig"; path = "Target Support Files/Pods-PetFosterApp-PetFosterAppUITests/Pods-PetFosterApp-PetFosterAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		405B5A157535117C99C5DAD6 /* Pods-PetFosterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFosterApp.release.xcconfig"; path = "Target Support Files/Pods-PetFosterApp/Pods-PetFosterApp.release.xcconfig"; sourceTree = "<group>"; };
-		6FB576988670855C750E6F22 /* Pods-PetFosterAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFosterAppTests.release.xcconfig"; path = "Target Support Files/Pods-PetFosterAppTests/Pods-PetFosterAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		B59E182523FF90F6F9D7911A /* Pods_PetFosterApp_PetFosterAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFosterApp_PetFosterAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA61F1CCFAC88EFA94DF60E9 /* Pods_PetFosterAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFosterAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEF53403856D2533601903A9 /* Pods-PetFosterApp-PetFosterAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFosterApp-PetFosterAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-PetFosterApp-PetFosterAppUITests/Pods-PetFosterApp-PetFosterAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D07EBB395D396620E362A3DE /* Pods-PetFosterAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFosterAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PetFosterAppTests/Pods-PetFosterAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3A441FA27FE8C60002A708B /* PetFosterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetFosterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A441FD27FE8C60002A708B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3A441FF27FE8C60002A708B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				328CD0913303B9E4974A6296 /* Pods_PetFosterAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				992136B3DACA603D0A30D60F /* Pods_PetFosterApp_PetFosterAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				2ECC6F07492855185779A35A /* Pods_PetFosterApp.framework */,
-				B59E182523FF90F6F9D7911A /* Pods_PetFosterApp_PetFosterAppUITests.framework */,
-				BA61F1CCFAC88EFA94DF60E9 /* Pods_PetFosterAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,10 +104,6 @@
 			children = (
 				30A7E62D49A9DB91E2BB97F4 /* Pods-PetFosterApp.debug.xcconfig */,
 				405B5A157535117C99C5DAD6 /* Pods-PetFosterApp.release.xcconfig */,
-				CEF53403856D2533601903A9 /* Pods-PetFosterApp-PetFosterAppUITests.debug.xcconfig */,
-				3A3FAFE1C6FA0DC4F7079F92 /* Pods-PetFosterApp-PetFosterAppUITests.release.xcconfig */,
-				D07EBB395D396620E362A3DE /* Pods-PetFosterAppTests.debug.xcconfig */,
-				6FB576988670855C750E6F22 /* Pods-PetFosterAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -208,7 +192,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3A4422727FE8C62002A708B /* Build configuration list for PBXNativeTarget "PetFosterAppTests" */;
 			buildPhases = (
-				3653FAFE4C8CE85211B4B32B /* [CP] Check Pods Manifest.lock */,
 				D3A4420C27FE8C62002A708B /* Sources */,
 				D3A4420D27FE8C62002A708B /* Frameworks */,
 				D3A4420E27FE8C62002A708B /* Resources */,
@@ -227,11 +210,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3A4422A27FE8C62002A708B /* Build configuration list for PBXNativeTarget "PetFosterAppUITests" */;
 			buildPhases = (
-				9121B1DFCCD423DF27B086EA /* [CP] Check Pods Manifest.lock */,
 				D3A4421627FE8C62002A708B /* Sources */,
 				D3A4421727FE8C62002A708B /* Frameworks */,
 				D3A4421827FE8C62002A708B /* Resources */,
-				4D0D7C45E09987A7120088D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,45 +312,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetFosterApp/Pods-PetFosterApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3653FAFE4C8CE85211B4B32B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PetFosterAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4D0D7C45E09987A7120088D7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PetFosterApp-PetFosterAppUITests/Pods-PetFosterApp-PetFosterAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PetFosterApp-PetFosterAppUITests/Pods-PetFosterApp-PetFosterAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetFosterApp-PetFosterAppUITests/Pods-PetFosterApp-PetFosterAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4E9D5DFDEBEA34C5464E2C82 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,28 +328,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-PetFosterApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9121B1DFCCD423DF27B086EA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PetFosterApp-PetFosterAppUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -660,7 +580,6 @@
 		};
 		D3A4422827FE8C62002A708B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D07EBB395D396620E362A3DE /* Pods-PetFosterAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -681,7 +600,6 @@
 		};
 		D3A4422927FE8C62002A708B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FB576988670855C750E6F22 /* Pods-PetFosterAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -702,7 +620,6 @@
 		};
 		D3A4422B27FE8C62002A708B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEF53403856D2533601903A9 /* Pods-PetFosterApp-PetFosterAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -721,7 +638,6 @@
 		};
 		D3A4422C27FE8C62002A708B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A3FAFE1C6FA0DC4F7079F92 /* Pods-PetFosterApp-PetFosterAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

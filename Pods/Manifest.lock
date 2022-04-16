@@ -17,11 +17,7 @@ DEPENDENCIES:
   - Parse
 
 SPEC REPOS:
-<<<<<<< HEAD
   trunk:
-=======
-  https://github.com/cocoapods/specs.git:
->>>>>>> login-view
     - Alamofire
     - AlamofireImage
     - Bolts
@@ -35,12 +31,6 @@ SPEC CHECKSUMS:
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
 
-<<<<<<< HEAD
-PODFILE CHECKSUM: bc0619bb583fa9f41e668365dea41a6f591e0d91
+PODFILE CHECKSUM: 1c347202dd73703f00f084da6869979639f5be4f
 
 COCOAPODS: 1.11.3
-=======
-PODFILE CHECKSUM: 2ad98e75443965a364b55350afe0e069f6aed294
-
-COCOAPODS: 1.5.2
->>>>>>> login-view
