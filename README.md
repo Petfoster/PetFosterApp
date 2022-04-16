@@ -1,6 +1,3 @@
-Original App Design Project - README Template
-===
-
 # Pet Finder
 
 ## Table of Contents
@@ -8,6 +5,11 @@ Original App Design Project - README Template
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
+
+
+## Code Sprint #1 Gif
+![petpart1](https://user-images.githubusercontent.com/70172259/162851643-fc1f5c70-1dc2-4204-a18b-b15a630fa998.gif)
+
 
 ## Overview
 ### Description
@@ -36,20 +38,20 @@ A pet foster app where users can find and post listings for pets in need of a fo
 
 **Required Must-have Stories**
 
-* User can Login
-* User can Sign Up
-* User can post a listing for a pet, with a photo and other info
-* User can select cell for more information
-* User can adopt pet from detailed view
-* User can search for keywords (species, breed, age)
-* User can post comments on a listing
+* [x] User can Login
+* [x] User can Sign Up
+* [ ] User can post a listing for a pet, with a photo and other info
+* [ ] User can select cell for more information
+* [ ] User can adopt pet from detailed view
+* [ ] User can search for keywords (species, breed, age)
+* [ ] User can post comments on a listing
 
 **Optional Nice-to-have Stories AKA Stretch goals**
 
-* Infinite Scrolling
-* User can sort listings by location via dropdown selection 
-* Refresh Listings
-* Add location of listing via map 
+* [ ] Infinite Scrolling
+* [ ] User can sort listings by location via dropdown selection 
+* [ ] Refresh Listings
+* [ ] Add location of listing via map 
 
 ### 2. Screen Archetypes
 
