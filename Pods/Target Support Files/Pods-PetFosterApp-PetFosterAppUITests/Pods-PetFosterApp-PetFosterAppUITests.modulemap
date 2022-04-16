@@ -1,6 +1,0 @@
-framework module Pods_PetFosterApp_PetFosterAppUITests {
-  umbrella header "Pods-PetFosterApp-PetFosterAppUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
