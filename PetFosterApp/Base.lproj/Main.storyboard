@@ -257,7 +257,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="PCo-v9-zFw">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addImage" translatesAutoresizingMaskIntoConstraints="NO" id="PCo-v9-zFw">
                                 <rect key="frame" x="79" y="91" width="256" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -314,7 +314,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image_placeholder" width="375" height="375"/>
+        <image name="addImage" width="200" height="200"/>
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="logo" width="391" height="305"/>
         <systemColor name="linkColor">
