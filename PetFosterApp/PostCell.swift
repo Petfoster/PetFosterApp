@@ -12,12 +12,13 @@ class PostCell: UITableViewCell {
 
     @IBOutlet weak var photoView: UIImageView!
     
-    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var petNameLabel: UILabel!
     
 
-    @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
     
-
+    @IBOutlet weak var speciesLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
