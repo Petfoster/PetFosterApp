@@ -42,6 +42,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         myRefreshControl.addTarget(self, action: #selector(loadListings), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
+        
+        loadListings()
     }
     
     @objc func keyboardWillBeHidden(note: Notification){
@@ -86,8 +88,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let listing = listings[section]
-        return listings.count
+        return 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -124,14 +125,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let listing = listings[indexPath.section]
         // let comments = (post["comments"] as? [PFObject]) ?? []
         
-        
-        if indexPath.row == 0 {
             //Main Post Cell
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
             let petName = listing["name"] as! String
             cell.petNameLabel.text = petName
+        
+            let species = listing["species"] as! String
             
-            cell.speciesLabel.text! += listing["species"] as! String
+            cell.speciesLabel.text! = "Species: " + species
             
             let age = listing["age"] as! Int
             
@@ -144,25 +145,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.photoView.af.setImage(withURL: url)
             
             return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
-            return cell
-        }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let post = listings[indexPath.section]
-        // let comments = (post["comments"] as? [PFObject]) ?? []
-        
-        print(post)
-//        print(indexPath.row,comments.count+1)
-//        if indexPath.row == comments.count+1 {
-//            showsCommentBar = true
-//            becomeFirstResponder()
-//            commentBar.inputTextView.becomeFirstResponder()
-//            selectedPost = post
-//        }
-        
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let post = listings[indexPath.section]
+//        // let comments = (post["comments"] as? [PFObject]) ?? []
+//        
+//        print(post)
+////        print(indexPath.row,comments.count+1)
+////        if indexPath.row == comments.count+1 {
+////            showsCommentBar = true
+////            becomeFirstResponder()
+////            commentBar.inputTextView.becomeFirstResponder()
+////            selectedPost = post
+////        }
+//        
+//    }
 
 }

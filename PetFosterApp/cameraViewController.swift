@@ -67,7 +67,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
         post.saveInBackground(){(success, error) in
             if success {
-                self.dismiss(animated: true, completion: nil)
+                // TODO: Clear/Refresh the page in some way
+                //self.dismiss(animated: true, completion: nil)
             }
         }
     }

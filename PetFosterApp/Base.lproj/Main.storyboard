@@ -119,12 +119,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hRo-HY-4KR">
-                                                    <rect key="frame" x="261" y="31" width="137" height="140"/>
+                                                    <rect key="frame" x="244" y="31" width="154" height="140"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="hRo-HY-4KR" secondAttribute="height" multiplier="398:407" id="AoK-Jf-fTl"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="157" id="Mpf-gI-CzT"/>
                                                         <constraint firstAttribute="width" constant="154" id="RbC-lc-aNM"/>
-                                                        <constraint firstAttribute="height" constant="407.5" id="iOz-Bc-l8i"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
