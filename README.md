@@ -7,6 +7,10 @@
 2. [Schema](#Schema)
 
 
+## Code Sprint 2 Gif 
+![petfoster2](https://user-images.githubusercontent.com/70172259/163904530-cdf8c8f7-053f-462b-8d8a-abeced2f8ce2.gif)
+
+
 ## Code Sprint #1 Gif
 ![petpart1](https://user-images.githubusercontent.com/70172259/162851643-fc1f5c70-1dc2-4204-a18b-b15a630fa998.gif)
 
@@ -40,7 +44,7 @@ A pet foster app where users can find and post listings for pets in need of a fo
 
 * [x] User can Login
 * [x] User can Sign Up
-* [ ] User can post a listing for a pet, with a photo and other info
+* [X] User can post a listing for a pet, with a photo and other info
 * [ ] User can select cell for more information
 * [ ] User can adopt pet from detailed view
 * [ ] User can search for keywords (species, breed, age)
@@ -50,7 +54,7 @@ A pet foster app where users can find and post listings for pets in need of a fo
 
 * [ ] Infinite Scrolling
 * [ ] User can sort listings by location via dropdown selection 
-* [ ] Refresh Listings
+* [X] Refresh Listings
 * [ ] Add location of listing via map 
 
 ### 2. Screen Archetypes
