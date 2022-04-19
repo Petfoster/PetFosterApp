@@ -20,6 +20,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     var showsCommentBar = false;
     var selectedPost: PFObject!
+    var numberOfPosts: Int!
+    
+    let myRefreshControl = UIRefreshControl()
     
     
     override func viewDidLoad() {
@@ -29,13 +32,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         commentBar.sendButton.title = "Post"
         commentBar.delegate = self
         
+        numberOfPosts = 20
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.keyboardDismissMode = .interactive
         
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        myRefreshControl.addTarget(self, action: #selector(loadPosts), for: .valueChanged)
+        tableView.refreshControl = myRefreshControl
     }
     
     @objc func keyboardWillBeHidden(note: Notification){
@@ -54,18 +60,22 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        loadPosts()
+    }
+    
+    @objc func loadPosts() {
         let query = PFQuery(className: "Posts")
-        query.order(byDescending: "createdAt")
-        query.includeKeys(["author","comments","comments.author"])
-        query.limit = 20
-        
-        query.findObjectsInBackground{ (posts,error) in
+        query.includeKeys(["author", "comments", "comments.author"])
+        query.limit = numberOfPosts
+        query.findObjectsInBackground{ (posts, error) in
             if posts != nil {
                 self.posts = posts!
+                self.myRefreshControl.endRefreshing()
                 self.tableView.reloadData()
             }
         }
     }
+    
     @IBAction func logoutButton(_ sender: Any) {
         PFUser.logOut()
         let main = UIStoryboard (name: "Main", bundle: nil)
