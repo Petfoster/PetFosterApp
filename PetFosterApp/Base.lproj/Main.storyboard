@@ -289,8 +289,37 @@
                                     <outletCollection property="gestureRecognizers" destination="wFU-z9-2cV" appends="YES" id="sD4-XB-pg0"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rws-9R-W1w">
+                                <rect key="frame" x="0.0" y="47" width="112" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onCancelButton:" destination="xbK-Id-DPL" eventType="touchUpInside" id="2Re-BM-a5J"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovh-iw-F8l">
+                                <rect key="frame" x="32" y="349" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age (Years)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-QT-bFv">
+                                <rect key="frame" x="32" y="391" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="it0-bh-v3s">
+                                <rect key="frame" x="32" y="433" width="164" height="82"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="Dog"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="Cat"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="Rabbit"/>
+                                </userDefinedRuntimeAttributes>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="In0-ex-RTh">
-                                <rect key="frame" x="152" y="429" width="110" height="39"/>
+                                <rect key="frame" x="152" y="659" width="110" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -301,16 +330,8 @@
                                     <action selector="onSubmitButton:" destination="xbK-Id-DPL" eventType="touchUpInside" id="Yly-S4-zes"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rws-9R-W1w">
-                                <rect key="frame" x="0.0" y="47" width="112" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onCancelButton:" destination="xbK-Id-DPL" eventType="touchUpInside" id="2Re-BM-a5J"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovh-iw-F8l">
-                                <rect key="frame" x="32" y="349" width="350" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CW9-ZP-VVs">
+                                <rect key="frame" x="32" y="535" width="350" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -321,8 +342,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="8gI-we-u6z"/>
                     <connections>
+                        <outlet property="ageField" destination="0oU-QT-bFv" id="Oen-1e-KIq"/>
                         <outlet property="commentField" destination="ovh-iw-F8l" id="WwH-cO-zXd"/>
+                        <outlet property="descField" destination="CW9-ZP-VVs" id="3fp-7Z-Njm"/>
                         <outlet property="imageView" destination="PCo-v9-zFw" id="WRk-Dy-CVW"/>
+                        <outlet property="speciesPicker" destination="it0-bh-v3s" id="NSD-IJ-gMc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yao-yn-8r7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -332,7 +356,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="751" y="2365"/>
+            <point key="canvasLocation" x="750.72463768115949" y="2364.5089285714284"/>
         </scene>
     </scenes>
     <resources>
