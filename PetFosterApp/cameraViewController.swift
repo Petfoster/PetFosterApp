@@ -8,13 +8,24 @@ import UIKit
 import AlamofireImage
 import Parse
 
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
 
     @IBOutlet weak var commentField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var speciesPicker: UIPickerView!
+    @IBOutlet weak var ageField: UITextField!
+    @IBOutlet weak var descField: UITextField!
+    
+    var speciesData: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        speciesData = ["Dog", "Cat", "Rabbit"]
+        self.speciesPicker.delegate = self
+        self.speciesPicker.dataSource = self
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
@@ -42,10 +53,13 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         dismiss(animated: true, completion: nil)
     }
     @IBAction func onSubmitButton(_ sender: Any) {
-        let post = PFObject(className: "Posts")
+        let post = PFObject(className: "Listing")
 
-        post["caption"] = commentField.text!
+        post["name"] = commentField.text!
         post["author"] = PFUser.current()!
+        post["age"] = Int(ageField.text!)
+        post["description"] = descField.text!
+        post["species"] = speciesData[speciesPicker.selectedRow(inComponent: 0)]
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(name: "image.png", data: imageData!)
 
@@ -53,7 +67,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
         post.saveInBackground(){(success, error) in
             if success {
-                self.dismiss(animated: true, completion: nil)
+                // TODO: Clear/Refresh the page in some way
+                //self.dismiss(animated: true, completion: nil)
             }
         }
     }
@@ -61,6 +76,19 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func onCancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return speciesData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return speciesData[row]
+    }
 
-
+   
+    
 }
