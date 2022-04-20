@@ -147,6 +147,22 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             return cell
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for:cell)!
+        let listing = listings[indexPath.row]
+        
+        let detailsViewController = segue.destination as! PetDetailViewController
+        detailsViewController.listing = listing
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let post = listings[indexPath.section]
 //        // let comments = (post["comments"] as? [PFObject]) ?? []
@@ -161,5 +177,4 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 ////        }
 //        
 //    }
-
 }

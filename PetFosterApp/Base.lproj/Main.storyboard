@@ -144,6 +144,7 @@
                                             <outlet property="petNameLabel" destination="y5q-j4-Y6K" id="dp7-SW-8Mi"/>
                                             <outlet property="photoView" destination="hRo-HY-4KR" id="xV4-06-e0q"/>
                                             <outlet property="speciesLabel" destination="OjZ-M2-nqJ" id="OkM-fq-FN0"/>
+                                            <segue destination="izc-q9-D7q" kind="show" id="WU9-XV-bGq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -166,6 +167,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fmo-kN-Q8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-507.24637681159425" y="2364.5089285714284"/>
+        </scene>
+        <!--Pet Detail View Controller-->
+        <scene sceneID="PK9-XN-h8w">
+            <objects>
+                <viewController id="izc-q9-D7q" customClass="PetDetailViewController" customModule="PetFosterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aqV-Ff-pgi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4f8-BV-dER"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fFT-KW-sjf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KF5-AD-Sry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-554" y="3264"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eRc-wr-ou0">
