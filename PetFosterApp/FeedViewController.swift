@@ -154,7 +154,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = sender as! UITableViewCell
         let indexPath = tableView.indexPath(for:cell)!
-        let listing = listings[indexPath.row]
+        let listing = listings[indexPath.section]
         
         let detailsViewController = segue.destination as! PetDetailViewController
         detailsViewController.listing = listing
