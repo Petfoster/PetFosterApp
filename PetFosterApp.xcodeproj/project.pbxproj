@@ -21,7 +21,8 @@
 		D3A4422127FE8C62002A708B /* PetFosterAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4422027FE8C62002A708B /* PetFosterAppUITestsLaunchTests.swift */; };
 		D3EE0CC4280A97F200A267E6 /* cameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EE0CC3280A97F200A267E6 /* cameraViewController.swift */; };
 		D3EE0CCA280A9D5F00A267E6 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EE0CC9280A9D5F00A267E6 /* PostCell.swift */; };
-		D3EE0CCC280A9D7200A267E6 /* commentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EE0CCB280A9D7200A267E6 /* commentCell.swift */; };
+		FA4202AF28176D4300AB16AD /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4202AE28176D4300AB16AD /* CommentCell.swift */; };
+		FA78438E2810CE1C00949CA6 /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78438D2810CE1C00949CA6 /* PetDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,8 @@
 		D3A4422027FE8C62002A708B /* PetFosterAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFosterAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D3EE0CC3280A97F200A267E6 /* cameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraViewController.swift; sourceTree = "<group>"; };
 		D3EE0CC9280A9D5F00A267E6 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
-		D3EE0CCB280A9D7200A267E6 /* commentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentCell.swift; sourceTree = "<group>"; };
+		FA4202AE28176D4300AB16AD /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		FA78438D2810CE1C00949CA6 /* PetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +146,8 @@
 				D3A4420B27FE8C62002A708B /* Info.plist */,
 				D3EE0CC3280A97F200A267E6 /* cameraViewController.swift */,
 				D3EE0CC9280A9D5F00A267E6 /* PostCell.swift */,
-				D3EE0CCB280A9D7200A267E6 /* commentCell.swift */,
+				FA78438D2810CE1C00949CA6 /* PetDetailViewController.swift */,
+				FA4202AE28176D4300AB16AD /* CommentCell.swift */,
 			);
 			path = PetFosterApp;
 			sourceTree = "<group>";
@@ -345,9 +348,10 @@
 				D3EE0CC4280A97F200A267E6 /* cameraViewController.swift in Sources */,
 				D3A441FE27FE8C60002A708B /* AppDelegate.swift in Sources */,
 				0AC864E6280798D000C2FA0C /* FeedViewController.swift in Sources */,
+				FA4202AF28176D4300AB16AD /* CommentCell.swift in Sources */,
 				0AC864E828079B2A00C2FA0C /* LoginViewController.swift in Sources */,
+				FA78438E2810CE1C00949CA6 /* PetDetailViewController.swift in Sources */,
 				D3A4420027FE8C60002A708B /* SceneDelegate.swift in Sources */,
-				D3EE0CCC280A9D7200A267E6 /* commentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

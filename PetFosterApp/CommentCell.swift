@@ -1,17 +1,18 @@
 //
-//  commentCell.swift
+//  CommentCell.swift
 //  PetFosterApp
 //
-//  Created by Alexis Sanchez on 4/15/22.
+//  Created by Niko Holbrook on 4/25/22.
 //
 
-import Foundation
 import UIKit
 
 class CommentCell: UITableViewCell {
-
+    
+    
+    @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
