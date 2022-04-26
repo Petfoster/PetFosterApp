@@ -7,6 +7,10 @@
 2. [Schema](#Schema)
 
 
+## Code Sprint 3 Gif
+![petfoster3](https://user-images.githubusercontent.com/70172259/165195747-6aa785f8-8797-4afc-bd6b-25bee21b4ba1.gif)
+
+
 ## Code Sprint 2 Gif 
 ![petfoster2](https://user-images.githubusercontent.com/70172259/163904530-cdf8c8f7-053f-462b-8d8a-abeced2f8ce2.gif)
 
@@ -45,10 +49,10 @@ A pet foster app where users can find and post listings for pets in need of a fo
 * [x] User can Login
 * [x] User can Sign Up
 * [X] User can post a listing for a pet, with a photo and other info
-* [ ] User can select cell for more information
+* [X] User can select cell for more information
 * [ ] User can adopt pet from detailed view
 * [ ] User can search for keywords (species, breed, age)
-* [ ] User can post comments on a listing
+* [X] User can post comments on a listing
 
 **Optional Nice-to-have Stories AKA Stretch goals**
 
