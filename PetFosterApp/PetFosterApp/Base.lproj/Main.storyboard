@@ -166,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fmo-kN-Q8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2078" y="2365"/>
+            <point key="canvasLocation" x="-2078.2608695652175" y="2364.5089285714284"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eRc-wr-ou0">
@@ -218,89 +218,85 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="u4F-ae-gjH" kind="relationship" relationship="rootViewController" id="9X8-do-5vt"/>
+                        <segue destination="xdd-R8-HIy" kind="relationship" relationship="rootViewController" id="xmE-8I-7f0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxC-Z7-Biu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="170" y="1632"/>
         </scene>
-        <!--Search-->
-        <scene sceneID="BbT-Ke-7Sx">
+        <!--SearchView-->
+        <scene sceneID="3Kf-RK-JbZ">
             <objects>
-                <viewController title="Search" id="u4F-ae-gjH" customClass="SearchViewController" customModule="PetFosterApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UYU-C2-OR1">
+                <tableViewController title="SearchView" id="xdd-R8-HIy" customClass="SearchTableViewController" customModule="PetFosterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="c8W-Z9-pwG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Species:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ek2-0T-Y61">
-                                <rect key="frame" x="54" y="126" width="92" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-eJ-NNV">
-                                <rect key="frame" x="54" y="290" width="92" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-ob-SyR">
-                                <rect key="frame" x="54" y="440" width="92" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYm-hU-yOc">
-                                <rect key="frame" x="154" y="79" width="185" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age (0-5)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fTq-EY-iij">
-                                <rect key="frame" x="179" y="311" width="123" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vNX-IU-uxX">
-                                <rect key="frame" x="154" y="392" width="185" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdB-MS-41j">
-                                <rect key="frame" x="144" y="612" width="122" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Search ">
-                                            <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="24" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="searchButton:" destination="u4F-ae-gjH" eventType="touchUpInside" id="IRh-X1-Bp0"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="lqm-aA-5pG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Search for Pet" id="mf5-p9-Ly6"/>
-                    <connections>
-                        <outlet property="ageText" destination="fTq-EY-iij" id="n8D-8o-s23"/>
-                        <outlet property="distanceMenu" destination="vNX-IU-uxX" id="DrA-XT-hVq"/>
-                        <outlet property="speciesMenu" destination="RYm-hU-yOc" id="ouk-Os-ffu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SRp-U8-sa6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchTableViewCell" rowHeight="142" id="ol1-gL-cxU" customClass="SearchTableViewCell" customModule="PetFosterApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="142"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ol1-gL-cxU" id="tMd-Gz-U6I">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojn-98-q4c">
+                                            <rect key="frame" x="30" y="11" width="45" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKp-Yz-cxQ">
+                                            <rect key="frame" x="30" y="51" width="30" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3RY-yp-cqA">
+                                            <rect key="frame" x="175" y="7" width="219" height="128"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAw-YU-eHL">
+                                            <rect key="frame" x="30" y="86.5" width="61" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ojn-98-q4c" firstAttribute="top" secondItem="tMd-Gz-U6I" secondAttribute="topMargin" id="1wu-8j-KSt"/>
+                                        <constraint firstAttribute="bottom" secondItem="3RY-yp-cqA" secondAttribute="bottom" constant="7" id="HAb-VZ-6Zn"/>
+                                        <constraint firstItem="EAw-YU-eHL" firstAttribute="top" secondItem="oKp-Yz-cxQ" secondAttribute="bottom" constant="15" id="J2N-4W-iCS"/>
+                                        <constraint firstItem="3RY-yp-cqA" firstAttribute="leading" secondItem="ojn-98-q4c" secondAttribute="trailing" constant="100" id="S0F-O3-7cl"/>
+                                        <constraint firstItem="ojn-98-q4c" firstAttribute="leading" secondItem="tMd-Gz-U6I" secondAttribute="leadingMargin" constant="10" id="TLf-5F-UFu"/>
+                                        <constraint firstItem="oKp-Yz-cxQ" firstAttribute="leading" secondItem="tMd-Gz-U6I" secondAttribute="leadingMargin" constant="10" id="TOm-c2-mea"/>
+                                        <constraint firstItem="3RY-yp-cqA" firstAttribute="top" secondItem="tMd-Gz-U6I" secondAttribute="top" constant="7" id="eIa-VM-5oR"/>
+                                        <constraint firstItem="3RY-yp-cqA" firstAttribute="leading" secondItem="EAw-YU-eHL" secondAttribute="trailing" constant="84" id="jPR-wA-yck"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="EAw-YU-eHL" secondAttribute="bottom" constant="24" id="siu-VA-lm3"/>
+                                        <constraint firstItem="EAw-YU-eHL" firstAttribute="leading" secondItem="tMd-Gz-U6I" secondAttribute="leadingMargin" constant="10" id="sx9-cv-otY"/>
+                                        <constraint firstItem="3RY-yp-cqA" firstAttribute="leading" secondItem="oKp-Yz-cxQ" secondAttribute="trailing" constant="115" id="uIl-xb-76t"/>
+                                        <constraint firstItem="oKp-Yz-cxQ" firstAttribute="top" secondItem="ojn-98-q4c" secondAttribute="bottom" constant="19.5" id="xIg-zb-bWX"/>
+                                        <constraint firstAttribute="trailing" secondItem="3RY-yp-cqA" secondAttribute="trailing" constant="20" symbolic="YES" id="zMY-3s-wGd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ageLabel" destination="oKp-Yz-cxQ" id="iKZ-fi-fGt"/>
+                                    <outlet property="nameLabel" destination="ojn-98-q4c" id="Mob-6x-bH8"/>
+                                    <outlet property="picView" destination="3RY-yp-cqA" id="q5O-bp-KWq"/>
+                                    <outlet property="speciesLabel" destination="EAw-YU-eHL" id="C0g-8j-Zbp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xdd-R8-HIy" id="jpL-ut-UzQ"/>
+                            <outlet property="delegate" destination="xdd-R8-HIy" id="iZy-ke-if1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ctW-Hp-Yd2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hjj-yz-dGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186.95652173913044" y="2476.3392857142858"/>
+            <point key="canvasLocation" x="168.11594202898553" y="2389.9553571428569"/>
         </scene>
         <!--Post-->
         <scene sceneID="ltb-40-HSY">

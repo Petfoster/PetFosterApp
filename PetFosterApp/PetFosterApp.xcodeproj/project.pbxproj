@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A634DA42810DF8E005D3EE2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A634DA32810DF8E005D3EE2 /* SearchViewController.swift */; };
+		0A634DB02817E921005D3EE2 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A634DAF2817E921005D3EE2 /* SearchTableViewController.swift */; };
+		0A634DB22817ED78005D3EE2 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A634DB12817ED78005D3EE2 /* SearchTableViewCell.swift */; };
 		0AC864E6280798D000C2FA0C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC864E5280798D000C2FA0C /* FeedViewController.swift */; };
 		0AC864E828079B2A00C2FA0C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC864E728079B2A00C2FA0C /* LoginViewController.swift */; };
 		8BDD63BB52E3E96432D5007F /* Pods_PetFosterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ECC6F07492855185779A35A /* Pods_PetFosterApp.framework */; };
@@ -43,7 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A634DA32810DF8E005D3EE2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		0A634DAF2817E921005D3EE2 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		0A634DB12817ED78005D3EE2 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		0AC864E5280798D000C2FA0C /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0AC864E728079B2A00C2FA0C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2ECC6F07492855185779A35A /* Pods_PetFosterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFosterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,7 +149,8 @@
 				D3EE0CC3280A97F200A267E6 /* cameraViewController.swift */,
 				D3EE0CC9280A9D5F00A267E6 /* PostCell.swift */,
 				D3EE0CCB280A9D7200A267E6 /* commentCell.swift */,
-				0A634DA32810DF8E005D3EE2 /* SearchViewController.swift */,
+				0A634DB12817ED78005D3EE2 /* SearchTableViewCell.swift */,
+				0A634DAF2817E921005D3EE2 /* SearchTableViewController.swift */,
 			);
 			path = PetFosterApp;
 			sourceTree = "<group>";
@@ -344,14 +347,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3EE0CCA280A9D5F00A267E6 /* PostCell.swift in Sources */,
+				0A634DB02817E921005D3EE2 /* SearchTableViewController.swift in Sources */,
 				D3A4420227FE8C60002A708B /* ViewController.swift in Sources */,
 				D3EE0CC4280A97F200A267E6 /* cameraViewController.swift in Sources */,
-				0A634DA42810DF8E005D3EE2 /* SearchViewController.swift in Sources */,
 				D3A441FE27FE8C60002A708B /* AppDelegate.swift in Sources */,
 				0AC864E6280798D000C2FA0C /* FeedViewController.swift in Sources */,
 				0AC864E828079B2A00C2FA0C /* LoginViewController.swift in Sources */,
 				D3A4420027FE8C60002A708B /* SceneDelegate.swift in Sources */,
 				D3EE0CCC280A9D7200A267E6 /* commentCell.swift in Sources */,
+				0A634DB22817ED78005D3EE2 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
