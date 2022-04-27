@@ -137,7 +137,17 @@ class PetDetailViewController: UIViewController, MessageInputBarDelegate, UITabl
         return showsCommentBar
     }
     
-
+    @IBAction func adoptPet(_ sender: Any) {
+        listing.setValue(PFUser.current()!, forKey: "claimedBy")
+        listing.saveInBackground{(success,error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                print("Error claiming pet")
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
