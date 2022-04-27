@@ -314,6 +314,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fFT-KW-sjf"/>
                     <connections>
+                        <outlet property="detailAdoptButton" destination="mV7-te-k3L" id="nZt-84-VVf"/>
                         <outlet property="detailAgeLabel" destination="i8L-ec-8lk" id="MiA-9v-eF4"/>
                         <outlet property="detailDescLabel" destination="HVw-TB-da2" id="Xga-5O-DNC"/>
                         <outlet property="detailDescTitle" destination="1M4-jC-R90" id="5NM-27-6db"/>

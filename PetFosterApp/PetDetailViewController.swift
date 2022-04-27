@@ -27,8 +27,15 @@ class PetDetailViewController: UIViewController, MessageInputBarDelegate, UITabl
     @IBOutlet weak var detailDescLabel: UILabel!
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailTableView: UITableView!
+    @IBOutlet weak var detailAdoptButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let owner = listing["author"] as! PFUser
+        
+        if owner.objectId == PFUser.current()?.objectId {
+            detailAdoptButton.isHidden = true
+        }
         
         comments = (listing["comments"] as? [PFObject]) ?? []
         
