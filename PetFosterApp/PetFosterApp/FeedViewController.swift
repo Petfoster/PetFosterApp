@@ -15,6 +15,7 @@ import MessageInputBar
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,MessageInputBarDelegate{
     
+    
     var listings = [PFObject]()
     let commentBar = MessageInputBar()
     @IBOutlet weak var tableView: UITableView!
@@ -147,6 +148,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             return cell
     }
     
+<<<<<<< Updated upstream:PetFosterApp/PetFosterApp/FeedViewController.swift
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let post = listings[indexPath.section]
 //        // let comments = (post["comments"] as? [PFObject]) ?? []
@@ -162,4 +164,23 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        
 //    }
 
+=======
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for:cell)!
+        let listing = listings[indexPath.section]
+        
+        let detailsViewController = segue.destination as! PetDetailViewController
+        detailsViewController.listing = listing
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+>>>>>>> Stashed changes:PetFosterApp/FeedViewController.swift
 }
