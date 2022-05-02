@@ -46,6 +46,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func loadListings() {
         let query = PFQuery(className: "Listing")
+        query.whereKeyDoesNotExist("claimedBy")
         query.includeKeys(["name", "age", "species", "author", "comments", "comments.author"])
         query.limit = numberOfListings
         query.findObjectsInBackground{ (posts, error) in

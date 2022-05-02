@@ -27,8 +27,15 @@ class PetDetailViewController: UIViewController, MessageInputBarDelegate, UITabl
     @IBOutlet weak var detailDescLabel: UILabel!
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailTableView: UITableView!
+    @IBOutlet weak var detailAdoptButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let owner = listing["author"] as! PFUser
+        
+        if owner.objectId == PFUser.current()?.objectId {
+            detailAdoptButton.isHidden = true
+        }
         
         comments = (listing["comments"] as? [PFObject]) ?? []
         
@@ -137,7 +144,17 @@ class PetDetailViewController: UIViewController, MessageInputBarDelegate, UITabl
         return showsCommentBar
     }
     
-
+    @IBAction func adoptPet(_ sender: Any) {
+        listing.setValue(PFUser.current()!, forKey: "claimedBy")
+        listing.saveInBackground{(success,error) in
+            if success{
+                _ = self.navigationController?.popViewController(animated: true)
+            } else {
+                print("Error claiming pet")
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

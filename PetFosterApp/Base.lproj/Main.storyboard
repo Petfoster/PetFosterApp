@@ -224,7 +224,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVw-TB-da2">
-                                <rect key="frame" x="20" y="528" width="374" height="186"/>
+                                <rect key="frame" x="20" y="528" width="374" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -238,7 +238,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="22z-lc-Ce8">
-                                <rect key="frame" x="0.0" y="565" width="414" height="135"/>
+                                <rect key="frame" x="0.0" y="707" width="414" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -301,12 +301,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mV7-te-k3L">
+                                <rect key="frame" x="175" y="669" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Adopt"/>
+                                <connections>
+                                    <action selector="adoptPet:" destination="izc-q9-D7q" eventType="touchUpInside" id="Xl0-tI-v6p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4f8-BV-dER"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="fFT-KW-sjf"/>
                     <connections>
+                        <outlet property="detailAdoptButton" destination="mV7-te-k3L" id="nZt-84-VVf"/>
                         <outlet property="detailAgeLabel" destination="i8L-ec-8lk" id="MiA-9v-eF4"/>
                         <outlet property="detailDescLabel" destination="HVw-TB-da2" id="Xga-5O-DNC"/>
                         <outlet property="detailDescTitle" destination="1M4-jC-R90" id="5NM-27-6db"/>
