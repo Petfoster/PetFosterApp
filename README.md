@@ -6,6 +6,8 @@
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
 
+## Code Sprint 4 Gif
+![petfoster4](https://user-images.githubusercontent.com/70172259/166341590-83628257-25cf-45ab-b30d-5578834c0030.gif)
 
 ## Code Sprint 3 Gif
 ![petfoster3](https://user-images.githubusercontent.com/70172259/165195747-6aa785f8-8797-4afc-bd6b-25bee21b4ba1.gif)
@@ -50,8 +52,8 @@ A pet foster app where users can find and post listings for pets in need of a fo
 * [x] User can Sign Up
 * [X] User can post a listing for a pet, with a photo and other info
 * [X] User can select cell for more information
-* [ ] User can adopt pet from detailed view
-* [ ] User can search for keywords (species, breed, age)
+* [X] User can adopt pet from detailed view
+* [X] User can search for keywords (species, breed, age)
 * [X] User can post comments on a listing
 
 **Optional Nice-to-have Stories AKA Stretch goals**
