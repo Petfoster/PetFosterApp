@@ -148,7 +148,7 @@ class PetDetailViewController: UIViewController, MessageInputBarDelegate, UITabl
         listing.setValue(PFUser.current()!, forKey: "claimedBy")
         listing.saveInBackground{(success,error) in
             if success{
-                self.dismiss(animated: true, completion: nil)
+                _ = self.navigationController?.popViewController(animated: true)
             } else {
                 print("Error claiming pet")
             }
