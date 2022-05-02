@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A21E95D281A25650091EFF3 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21E95C281A25650091EFF3 /* SearchTableViewCell.swift */; };
+		0A21E95F281A258B0091EFF3 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21E95E281A258B0091EFF3 /* SearchTableViewController.swift */; };
 		0AC864E6280798D000C2FA0C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC864E5280798D000C2FA0C /* FeedViewController.swift */; };
 		0AC864E828079B2A00C2FA0C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC864E728079B2A00C2FA0C /* LoginViewController.swift */; };
 		8BDD63BB52E3E96432D5007F /* Pods_PetFosterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ECC6F07492855185779A35A /* Pods_PetFosterApp.framework */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A21E95C281A25650091EFF3 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		0A21E95E281A258B0091EFF3 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		0AC864E5280798D000C2FA0C /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0AC864E728079B2A00C2FA0C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2ECC6F07492855185779A35A /* Pods_PetFosterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFosterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +152,8 @@
 				D3EE0CC9280A9D5F00A267E6 /* PostCell.swift */,
 				FA78438D2810CE1C00949CA6 /* PetDetailViewController.swift */,
 				FA4202AE28176D4300AB16AD /* CommentCell.swift */,
+				0A21E95C281A25650091EFF3 /* SearchTableViewCell.swift */,
+				0A21E95E281A258B0091EFF3 /* SearchTableViewController.swift */,
 			);
 			path = PetFosterApp;
 			sourceTree = "<group>";
@@ -351,7 +357,9 @@
 				FA4202AF28176D4300AB16AD /* CommentCell.swift in Sources */,
 				0AC864E828079B2A00C2FA0C /* LoginViewController.swift in Sources */,
 				FA78438E2810CE1C00949CA6 /* PetDetailViewController.swift in Sources */,
+				0A21E95F281A258B0091EFF3 /* SearchTableViewController.swift in Sources */,
 				D3A4420027FE8C60002A708B /* SceneDelegate.swift in Sources */,
+				0A21E95D281A25650091EFF3 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
