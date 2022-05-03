@@ -16,6 +16,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
     let searchController  = UISearchController()
     var listings = [PFObject]()
     
+    
     let myRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -54,16 +55,85 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
         let scopeButton = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
         let searchText = searchBar.text!
         
-        getPets(scopeButton: scopeButton)
+        getPets(scopeButton: scopeButton, searchText: searchText)
+        //getPets()
         
     }
     
-    func getPets(scopeButton: String){
+//    func getPets(searchText: String){
+//        let query = PFQuery(className:"Listing")
+//        if(searchText ==  ""){
+//            self.loadListings()
+//        }else{
+//            let speciesQuery = PFQuery(className:"Listing")
+//            speciesQuery.whereKey("species", contains: searchText)
+//
+//            let ageQuery = PFQuery(className:"Listing")
+//            ageQuery.whereKey("age", contains: searchText)
+//
+//            let nameQuery = PFQuery(className:"Listing")
+//            nameQuery.whereKey("name", contains: searchText)
+//
+//            query.includeKeys(["name", "age", "species", "author", "comments", "comments.author"])
+//            query.findObjectsInBackground { lists, error in
+//                self.listings  = lists!
+//                self.myRefreshControl.endRefreshing()
+//                self.tableView.reloadData()
+//            }
+//        }
+//        self.myRefreshControl.endRefreshing()
+//        self.tableView.reloadData()
+//    }
+    
+    func getPets(scopeButton: String, searchText: String ){
         
-        let query = PFQuery(className:"Listing")
-        if(scopeButton ==  "All"){
+        var speciesQuery = PFQuery(className:"Listing")
+        
+        var ageQuery = PFQuery(className:"Listing")
+        
+        var nameQuery = PFQuery(className:"Listing")
+        
+        var query = PFQuery(className:"Listing")
+        
+        if(scopeButton ==  "All" && searchText == ""){
             self.loadListings()
-        }else{
+        }else if(scopeButton ==  "All" && searchText != "" ){
+            
+            speciesQuery.whereKey("species", contains: searchText)
+            ageQuery.whereKey("age", contains: searchText)
+            nameQuery.whereKey("name", contains: searchText)
+            
+            query = PFQuery.orQuery(withSubqueries: [speciesQuery, ageQuery, nameQuery])
+            query.includeKeys(["name", "age", "species", "author", "comments", "comments.author"])
+            query.findObjectsInBackground { (lists: [PFObject]?, error: Error?) in
+              if let error = error {
+                print("Listings could not be loaded: ")
+                print(error.localizedDescription)
+              } else {
+                  self.listings  = lists!
+                  self.myRefreshControl.endRefreshing()
+                  self.tableView.reloadData()
+                }
+            }
+            
+        }else if(scopeButton != "All" && searchText !=  ""){
+                
+            ageQuery.whereKey("age", contains: searchText)
+            nameQuery.whereKey("name", contains: searchText)
+            query = PFQuery.orQuery(withSubqueries: [ageQuery, nameQuery])
+            query.whereKey("species", contains: scopeButton)
+            query.findObjectsInBackground { (lists: [PFObject]?, error: Error?) in
+              if let error = error {
+                print("Listings could not be loaded: ")
+                print(error.localizedDescription)
+              } else {
+                  self.listings  = lists!
+                  self.myRefreshControl.endRefreshing()
+                  self.tableView.reloadData()
+                }
+            }
+                
+            }else{
             query.whereKey("species", contains: scopeButton)
             query.includeKeys(["name", "age", "species", "author", "comments", "comments.author"])
             query.findObjectsInBackground { lists, error in
@@ -75,7 +145,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
         self.myRefreshControl.endRefreshing()
         self.tableView.reloadData()
     }
-
+    
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return listings.count
